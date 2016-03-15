@@ -8,10 +8,17 @@
 	<script src="jquery-1.12.1.min.js"></script>
 	<script src="bugStorage.js"></script>
 	<script src="bugTracker.js"></script>
-	
+	<script>
+	window.applicationCache.onupdateready = function(){
+		var response = confirm("A new verion of the application is loaded in the cache. Do you want to use it?")
+		if (response){
+			window.location.reload();
+		}
+	};
+	</script>
 </head>
 <body>
-	<h1>Bug Tracker - 1.0</h1>
+	<h1>Bug Tracker - 4.0</h1>
 	<hr>
 	<label for="">Bug :</label>
 	<input type="text" name="" id="txtBug">

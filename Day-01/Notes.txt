@@ -97,12 +97,11 @@ WHATWG -> W3C
 1GBps
 
 
-1. Offline Application Cache
+1. Offline Application Cache (done)
 2. Service Workers
-3. Local Storage
-4. Session Storage
+3. Local Storage (done)
+4. Session Storage (done)
 5. Indexed Db
-6. Web SQL (obsolete)
 7. Web Workers
 8. Server Sent Events
 9. Web Sockets
