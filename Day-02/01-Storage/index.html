@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Storage - App</title>
+	<style>
+	.closed{
+		color : red;
+		text-decoration: line-through;
+		font-style: italic;
+		font-weight: bold;
+	}
+	li{
+		cursor: pointer;
+	}
+	</style>
+	<script type="text/javascript">
+	/*
+		window.localStorage
+			- key/value store
+			- value must be of type string
+			- Same Origin Policy
+			- 10MB storage limit per domain
+		APIs
+			- setItem(k, va)
+			- getItem(k) //=> v
+			- removeItem(k) 
+			- key(index) // => key at index
+			- clear()
+			- length
+
+
+	*/
+	</script>
+	<script src="jquery-1.12.1.min.js"></script>
+	<script>
+	var bugStorage = (function(){
+		var storage = window.localStorage;
+		var maxBugId = 0;
+		
+		function getAllBugs(){
+			var result = [];
+			for(var i=0; i<storage.length; i++){
+				var key = storage.key(i);
+				var data = storage.getItem(key);
+				var bug = JSON.parse(data);
+				maxBugId = maxBugId > bug.id ? maxBugId : bug.id;
+				result.push(bug);
+			}
+			return result;
+		}
+		function addNew(bugName){
+			var newBug = {
+				id : ++maxBugId,
+				name : bugName,
+				isClosed : false
+			}
+			storage.setItem(newBug.id, JSON.stringify(newBug));
+			return newBug;
+		}
+		function toggleBug(id){
+			var bug = JSON.parse(storage.getItem(id));
+			bug.isClosed = !bug.isClosed;
+			storage.setItem(id, JSON.stringify(bug));
+		}
+		function removeBug(id){
+			storage.removeItem(id);
+		}
+		return {
+			getAll : getAllBugs,
+			addNew : addNew,
+			toggle : toggleBug,
+			remove : removeBug
+
+		};
+	})()
+	$(function(){
+		//Move the below code to the bugStorage and let the bugStorage emit the appropriate event
+		window.addEventListener("storage", function(evtArg){
+			var id = parseInt(evtArg.key);
+			if (evtArg.newValue === null && evtArg.oldValue !== null){
+				//an existing bug is removed
+				$("li[data-bug-id=" + id + "]").remove();
+				return;
+			}
+			if (evtArg.newValue !== null && evtArg.oldValue === null){
+				//a new bug is added
+				createBugItem(JSON.parse(evtArg.newValue));
+				return;
+			}
+			//update the existing bug
+			$("li[data-bug-id=" + id + "]").toggleClass("closed");
+		});
+
+		bugStorage.getAll().forEach(createBugItem);
+		function createBugItem(bug){
+			$("<li>")
+				.attr("data-bug-id", bug.id)
+				.html(bug.name)
+				.addClass(bug.isClosed ? "closed" : "")
+				.appendTo("#olBugList");
+		}
+
+		$("#btnAdd").click(function(){
+			var newBug = bugStorage.addNew($("#txtBug").val());
+			createBugItem(newBug);		
+		});
+		$("#olBugList").on("click", "li", function(){
+			var $this = $(this);
+			var id = parseInt($this.attr("data-bug-id"),10);
+			$this.toggleClass("closed");
+			bugStorage.toggle(id);
+		});
+		$("#btnRemoveClosed").click(function(){
+			$("#olBugList >li.closed").each(function(){
+				var id = parseInt($(this).attr("data-bug-id"),10);
+				bugStorage.remove(id);
+				$(this).remove();
+			});
+		});
+
+	});
+	</script>
+</head>
+<body>
+	<h1>Bug Tracker</h1>
+	<hr>
+	<label for="">Bug :</label>
+	<input type="text" name="" id="txtBug">
+	<input type="button" value="Add Bug" id="btnAdd">
+	<input type="button" value="Remove Closed" id="btnRemoveClosed">
+	<ol id="olBugList"></ol>
+</body>
+</html>

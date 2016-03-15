@@ -1,0 +1,126 @@
+Dependency on the applications that requires INSTALLATION (fat clients) -
+
+winamp
+outlook
+messanger installers
+video player
+editor
+browser installers
+anti virus
+
+Browser apps - web apps
+
+outlook
+chat
+google docs
+
+
+
+Editor - Cloud 9 IDE
+Storage - github (api hooks)
+
+CPU 
+Memory
+Storage
+
+Unit
+Integration
+Static code analysis
+Peneratration tests
+Security code analysis
+Code Quality
+Prepare the build
+deploy
+
+Test 
+Run
+
+
+Very well orchestration technology giant - influence your decisions
+
+narrow target group
+
+
+Desktop
+App
+Data
+
+"It depends"
+
+1. Installed (offline) - D
+2. Data Persistence - D
+3. Multi threading - D
+4. Socket communication - D
+5. Device Access - D
+6. Media
+
+Rendering + Network client
+
+Microsoft
+
+Core infrastrucure Installed on the client machine
+
+
+Google , Mozilla (netscape), Apple
+
+Specification
+
+Name? - HTML5
+
+Standard Based 
+Cannot a proprietory API
+
+NPO
+
+HTML5 - a set of specifications that elevate the role of the browser to a virtual operating system
+
+Browser
+2000
+
+laptop
+
+1. Reinstall OS (Browser)
+2. Usage data 
+
+Chrome Book ($200)
+
+Browser
+
+Browser is replacing the OS
+
+INTERNET as an infrasture
+
+W3C
+
+WHATWG -> W3C
+
+1GBps
+
+
+1. Offline Application Cache
+2. Service Workers
+3. Local Storage
+4. Session Storage
+5. Indexed Db
+6. Web SQL (obsolete)
+7. Web Workers
+8. Server Sent Events
+9. Web Sockets
+10. WebRTC
+11. New HTML5 Tags
+12. New Input Types
+13. Geo Locations API
+14. Notifications API
+15. Audio
+16. Video
+17. Canvas
+18. SVG
+19. CSS3 Features
+20. CSS Preprocessors
+21. ES6 Features
+
+
+
+
+
+

@@ -1,0 +1,16 @@
+CACHE MANIFEST
+#Ver 1.0
+
+CACHE:
+#list all the resources that need to be cached
+jquery-1.12.1.min.js
+bugStorage.js
+bugTracker.js
+style.css
+
+NETWORK:
+*
+
+FALLBACK:
+#Offline alternative for online resources
+style-online.css	style-offline.css
