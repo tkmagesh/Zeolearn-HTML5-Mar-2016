@@ -103,8 +103,8 @@ WHATWG -> W3C
 4. Session Storage (done)
 5. Indexed Db
 7. Web Workers (done)
-8. Server Sent Events
-9. Web Sockets
+8. Server Sent Events (done)
+9. Web Sockets (done)
 10. WebRTC
 11. New HTML5 Tags
 12. New Input Types
