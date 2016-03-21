@@ -102,7 +102,7 @@ WHATWG -> W3C
 3. Local Storage (done)
 4. Session Storage (done)
 5. Indexed Db
-7. Web Workers
+7. Web Workers (done)
 8. Server Sent Events
 9. Web Sockets
 10. WebRTC
