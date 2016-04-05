@@ -128,8 +128,8 @@ function circlesWithArc() {
         canvas = elem.getContext('2d');
         canvas.shadowColor = "rgba(128,128,128,0.5)";
         canvas.shadowOffsetX = 5;
-        canvas.shadowOffsetY = 5;
-        canvas.shadowBlur = 0;
+        canvas.shadowOffsetY = -5;
+        canvas.shadowBlur = 4;
         canvas.font = "bold 50px verdana, sans-serif";
         canvas.fillText("my message", 100, 100);
     }

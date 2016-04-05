@@ -101,19 +101,19 @@ WHATWG -> W3C
 2. Service Workers
 3. Local Storage (done)
 4. Session Storage (done)
-5. Indexed Db
+5. Indexed Db (done)
 7. Web Workers (done)
 8. Server Sent Events (done)
 9. Web Sockets (done)
 10. WebRTC
 11. New HTML5 Tags
-12. New Input Types
-13. Geo Locations API
+12. New Input Types (done)
+13. Geo Locations API (done)
 14. Notifications API
-15. Audio
-16. Video
-17. Canvas
-18. SVG
+15. Audio (done)
+16. Video (done)
+17. Canvas (done)
+18. SVG (done)
 19. CSS3 Features
 20. CSS Preprocessors
 21. ES6 Features

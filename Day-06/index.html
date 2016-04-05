@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS 3.0 Demo</title>
+	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+
+	<style>
+	#content{
+		width: 300px;
+		height : 300px;
+		line-height: 300px;
+		font-size: 28pt;
+		text-align: center;
+		border : 2px solid black;
+		font-family: 'Montserrat', sans-serif;
+		margin : 200px;
+		
+
+		border-radius: 20px;
+		background : -webkit-linear-gradient(top left, blue 0%, yellow 50%, black 100%);
+		background : -moz-linear-gradient(top left, blue 0%, yellow 50%, black 100%);
+		background : -ms-linear-gradient(top left, blue 0%, yellow 50%, black 100%);
+		background : -o-linear-gradient(top left, blue 0%, yellow 50%, black 100%);
+		background : linear-gradient(top left, blue 0%, yellow 50%, black 100%);
+
+		box-shadow: 0px 0px 0px 5px gray, 0px 0px 0px 10px red, 0px 0px 0px 15px black;
+		text-shadow: 2px 2px white;
+		-webkit-transition: -webkit-transform 0.4s linear;
+
+	}
+
+	#content:hover{
+		-webkit-transform: rotate(45deg) scale(0.5, 0.5);
+	}
+
+	</style>
+</head>
+<body>
+	<div id="content">Zeolearn</div>
+</body>
+</html>
